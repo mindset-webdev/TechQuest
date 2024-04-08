@@ -1,0 +1,35 @@
+body {
+    background-image: url('tq1.jpg');
+    background-size: cover;
+    background-position: fixed;
+    background-repeat: no-repeat;
+
+}
+
+h1 {
+    text-align: left;
+    text-decoration: underline;
+    color: rgb(0, 140, 255);
+}
+h3 {
+    text-align: left;
+    color: rgb(0, 140, 255);
+ }
+
+ nav {
+    background-color: rgb(10, 10, 36);
+    color: rgb(7, 72, 126);
+    padding: 10px 20px;
+    text-align: right;
+    tex
+
+    
+ }
+ nav a {
+    text-align: left;
+    display: inline-block;
+    margin-right: 20px;
+    color: rgb(0, 195, 255);
+    text-decoration: none;
+
+}
