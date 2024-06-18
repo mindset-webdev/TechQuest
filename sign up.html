@@ -108,8 +108,8 @@ h2 {
     
 </head>
 <body>
+
     <h1>TechQuest Sign Up Form</h1>
-    <form action="https://formsubmit.co/techquesth1@gmail.com" method="POST">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
 
@@ -134,6 +134,48 @@ h2 {
 
         <input type="submit" value="Sign Up">
     </form>
+    <script>
+    const express = require('express');
+    const bodyParser = require('body-parser');
+    const nodemailer = require('nodemailer');
+ 
+    const app = express();
+    const port = process.env.PORT || 3000;
+ 
+    // Body parser middleware
+    app.use(bodyParser.urlencoded({ extended: false }));
+    app.use(bodyParser.json());
+ 
+    // Route to send email
+    app.post('/send-email', async (req, res) => {
+        try {
+            const { name, email, message } = req.body;
+ 
+            // Create reusable transporter object using the default SMTP transport
+            let transporter = nodemailer.createTransport({
+                service: 'gmail',
+                auth: {
+                    user: 'eurekasiyabu@gmail.com', // Your email address
+                    pass: 'KIds Innovations' // Your password
+                }
+            });
+ 
+            // Send mail with defined transport object
+            let info = await transporter.sendMail({
+                from: 'yourgmail@gmail.com', // sender address
+                to: 'yourgmail@.com', // list of receivers
+                subject: 'Message from your website', // Subject line
+                text: `Name: ${name}\nEmail: ${email}\n\n${message}` // plain text body
+            });
+ 
+            console.log('Email sent:', info.response);
+            res.status(200).send('Email sent');
+        } catch (error) {
+            console.error('Error sending email:', error);
+            res.status(500).send('Error sending email');
+        }
+    });
+        </script>
     <footer>
         &copy; 2024 TechQuest. All rights reserved.
     </footer>
