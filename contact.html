@@ -62,7 +62,25 @@ nav a:hover {
     cursor: pointer;
     border-radius: 10px;
 }
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+} 
+#slide-in {
+    animation: slideIn 1s ease forwards;
+}
     </style>
+    <script>
+        window.addEventListener('load', function() {
+    var slideInElement = document.getElementById('slide-in');
+    slideInElement.classList.add('slide-in-animation');
+});
+    </script>
 </head>
 <body>
     <header>
@@ -73,11 +91,13 @@ nav a:hover {
             <a href=" sign up.html">Sign Up</a>
 
     </nav>
+    <div id="slide-in">
     <section>
         <h2>Contact Us</h2>
         <p>If you have any questions or inquiries, feel free to contact us:</p>
         <p>Email: techquesth1@gmail.com</p>
     </section>
+</div>
     <footer>
         &copy; 2024 TechQuest. All rights reserved.
     </footer>

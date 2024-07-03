@@ -86,3 +86,14 @@ img {
 .container3{
     text-align: center;
 }
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+} 
+#slide-in {
+    animation: slideIn 1s ease forwards;
+}
