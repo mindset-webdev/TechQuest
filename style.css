@@ -46,13 +46,6 @@ section {
     border-radius: 5px;
     color: #02a2ff;
 }
-footer {
-    color: #02a2ff;
-    text-align: left;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
 button {
     background-color: #02a2ff;
     border: none;
